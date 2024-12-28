@@ -3,18 +3,18 @@ return
 {
   "akinsho/bufferline.nvim",
   event = "VeryLazy",
-  -- keys = {
-  --   { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle Pin" },
-  --   { "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete Non-Pinned Buffers" },
-  --   { "<leader>br", "<Cmd>BufferLineCloseRight<CR>", desc = "Delete Buffers to the Right" },
-  --   { "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", desc = "Delete Buffers to the Left" },
-  --   { "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
-  --   { "<S-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
-  --   { "[b", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
-  --   { "]b", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
-  --   { "[B", "<cmd>BufferLineMovePrev<cr>", desc = "Move buffer prev" },
-  --   { "]B", "<cmd>BufferLineMoveNext<cr>", desc = "Move buffer next" },
-  -- },
+  keys = {
+    { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle Pin" },
+    { "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete Non-Pinned Buffers" },
+    { "<leader>br", "<Cmd>BufferLineCloseRight<CR>", desc = "Delete Buffers to the Right" },
+    { "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", desc = "Delete Buffers to the Left" },
+    { "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
+    { "<S-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
+    { "[b", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
+    { "]b", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
+    { "[B", "<cmd>BufferLineMovePrev<cr>", desc = "Move buffer prev" },
+    { "]B", "<cmd>BufferLineMoveNext<cr>", desc = "Move buffer next" },
+  },
   opts = {
     options = {
       mode = "buffers", -- set to "tabs" to only show tabpages instead
@@ -50,28 +50,6 @@ return
         return LazyVim.config.icons.ft[opts.filetype]
       end,
     },
-    highlights = {
-        indicator_selected = {
-          fg = #121111,
-          sp = #111111,
-          -- fg = vim.g.primary,
-          -- sp = vim.g.primary,
-          underline = true,
-        },
-        buffer_selected = {
-          fg = vim.g.primary,
-          bg = "NONE",
-          bold = true,
-          underline = true,
-          sp = vim.g.primary,
-        },
-        close_button_selected = {
-          fg = vim.g.primary,
-          bg = "NONE",
-          underline = true,
-          sp = vim.g.primary,
-        },
-      },
   },
   config = function(_, opts)
     require("bufferline").setup(opts)
