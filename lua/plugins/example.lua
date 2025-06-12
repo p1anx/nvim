@@ -36,14 +36,7 @@ return {
     dependencies = { "hrsh7th/cmp-emoji" },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
-      -- local cmp = require("cmp")
       table.insert(opts.sources, { name = "emoji" })
-      -- return{
-      --   window = {
-      --     completion = cmp.config.window.bordered(),
-      --     documentation = cmp.config.window.bordered(),
-      --   },
-      -- }
     end,
   },
 
@@ -164,7 +157,11 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function(_, opts)
-      table.insert(opts.sections.lualine_x, "😄")
+      table.insert(opts.sections.lualine_x, {
+        function()
+          return "😄"
+        end,
+      })
     end,
   },
 
@@ -194,8 +191,6 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
-        "pyright",
-        "matlab-language-server",
       },
     },
   },
