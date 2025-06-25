@@ -12,11 +12,12 @@ return {
     --     return vim.o.columns * 0.4
     --   end
     -- end,
-    open_mapping = [[<c-/]],
-    direction = "float",
+    -- open_mapping = [[<c-/]],
+    direction = "horizontal", --'vertical' | 'horizontal' | 'tab' | 'float',
     shade_terminals = true, -- NO
   },
   keys = {
-    { "<leader>tt", "<Cmd>ToggleTerm<CR>", desc = "open terminal" },
+    -- { "n", "<leader>tt", "<Cmd>ToggleTerm<CR>", desc = "open terminal" },
+    { "<leader>t", "<Cmd>ToggleTerm<CR>", desc = "open terminal" },
   },
 }

@@ -1,0 +1,9 @@
+{
+  "Get the dir of shell script": {
+  "prefix": "bash_dir",
+  "body": [
+    "SCRIPT_DIR=\"$(cd $(dirname ${BASH_SOURCE[0]})\" && pwd)\""
+  ],
+  "description": "Get the Dir of shell script"
+  }
+}

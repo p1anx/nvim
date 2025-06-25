@@ -1,0 +1,10 @@
+{
+  "print test": {
+    "prefix": "pyprint",
+    "body": [
+      "print(\"helo test snp\")"
+    ],
+    "description": ""
+  }
+}
+

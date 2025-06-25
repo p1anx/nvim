@@ -69,3 +69,16 @@ vim.api.nvim_create_autocmd("FileType", {
     -- )
   end,
 })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "sh",
+  callback = function()
+    -- -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG
+    vim.api.nvim_buf_set_keymap(0, "n", "<F5>", ":w!<cr>:sp<cr>:te bash %<CR>i", { silent = true, noremap = true })
+  end,
+  vim.keymap.set("n", "<F6>", function()
+    vim.cmd("w")
+    local filename = vim.fn.expand("%")
+    local args = vim.fn.input("Enter args: ")
+    vim.cmd("terminal ./" .. filename .. " " .. args)
+  end, { buffer = true }),
+})
