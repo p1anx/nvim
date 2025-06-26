@@ -1,9 +1,29 @@
 {
-  "Get the dir of shell script": {
-  "prefix": "bash_dir",
+  "Get the Dir of shell script": {
+  "prefix": "shell_dir",
   "body": [
     "SCRIPT_DIR=\"$(cd $(dirname ${BASH_SOURCE[0]})\" && pwd)\""
   ],
   "description": "Get the Dir of shell script"
+  },
+  "Shell color": {
+    "prefix": "shell_color",
+    "body": [
+      "# 使用tput定义颜色",
+      "RED=$(tput setaf 1)",
+      "GREEN=$(tput setaf 2)",
+      "YELLOW=$(tput setaf 3)",
+      "BLUE=$(tput setaf 4)",
+      "RESET=$(tput sgr0)",
+      "# # 使用示例",
+      "# echo \"${GREEN}错误信息${RESET}\"",
+      "# echo \"${RED}成功信息${RESET}\"",
+      "",
+      "# status",
+      "OK=\"\\${GREEN}[ok] \"",
+      "ERROR=\"\\${RED}[err] \"",
+      ""
+    ],
+    "description": "set the color for shell"
   }
 }
