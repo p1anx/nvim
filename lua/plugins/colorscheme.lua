@@ -136,8 +136,8 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "gruvbox",
-      -- colorscheme = "monokai-pro",
-      colorscheme = "onedark",
+      colorscheme = "monokai-pro",
+      -- colorscheme = "onedark",
       -- colorscheme = "catppuccin",
       -- colorscheme = "tokyonight",
       -- colorscheme = "everforest",

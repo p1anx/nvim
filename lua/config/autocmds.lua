@@ -44,7 +44,13 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "python",
   callback = function()
     -- -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG
-    vim.api.nvim_buf_set_keymap(0, "n", "<F5>", ":w!<cr>:sp<cr>:te python %<CR>i", { silent = true, noremap = true })
+    vim.api.nvim_buf_set_keymap(
+      0,
+      "n",
+      "<leader>r",
+      ":w!<cr>:sp<cr>:te python %<CR>i",
+      { silent = true, noremap = true }
+    )
   end,
 })
 vim.api.nvim_create_autocmd("FileType", {

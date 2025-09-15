@@ -25,5 +25,35 @@
       ""
     ],
     "description": "set the color for shell"
+  },
+  "show help": {
+    "prefix": "shell_help",
+    "body": [
+      "function show_help() {",
+      "    cat << EOF",
+      "Usage: $0 [options]",
+      "",
+      "Options:",
+      "    -h, --help      Display this help message",
+      "    -v, --version   Display version information",
+      "    -f, --file FILE Specify input file",
+      "    -q, --quiet     Run in quiet mode",
+      "",
+      "Examples:",
+      "    $0 -f input.txt",
+      "    $0 --quiet",
+      "EOF",
+      "}",
+      "",
+      "# 主程序",
+      "case \"$1\" in",
+      "    -h|--help)",
+      "        show_help",
+      "        exit 0",
+      "        ;;",
+      "    # 其他参数处理...",
+      "esac"
+    ],
+    "description": "shell shows help"
   }
 }

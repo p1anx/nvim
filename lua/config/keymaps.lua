@@ -34,3 +34,7 @@ vim.keymap.set("n", "<leader>mm", ":w!<cr>:sp<cr>:te matlab -nodesktop -nosplash
 -- vim.keymap.set("n", "<leader>mm", ":te ~/hello.sh<cr>i")
 -- vim.keymap.set("n", "<c-t>", "<cmd>ToggleTerm<cr>")
 vim.keymap.set("n", "<leader>ms", ':lua require("luasnip.loaders").edit_snippet_files()')
+
+-- ========================================
+--   harpoon2
+-- ========================================
